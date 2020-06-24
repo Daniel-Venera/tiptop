@@ -41,8 +41,8 @@ class App extends React.Component {
             </div>
           </div>
           <div id='results'>
-            <div>Tip : <br></br><br></br><span>{this.state.amount ? tipAmount.toFixed(2) : null} </span></div>
-            <div id='total-result'>Total : <br></br><br></br><span id='total'>{this.state.amount ? total : null}</span> </div>
+            <div>Tip : <br></br><span>{this.state.amount ? tipAmount.toFixed(2) : "0.00"} </span></div>
+            <div id='total-result'>Total : <br></br><span id='total'>{this.state.amount ? total : "0.00"}</span> </div>
           </div>
         </div>
         <Footer />

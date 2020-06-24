@@ -29,17 +29,21 @@ class App extends React.Component {
         <Navbar />
         <div id='container'>
           <div>
-          <label>Amount</label>
-          <br></br>
-          <input name='amount' type='number' value={this.state.amount} onChange={this.handleChange}></input>
+            <div>
+              <label>Amount</label>
+              <br></br>
+              <input name='amount' type='number' value={this.state.amount} onChange={this.handleChange}></input>
+            </div>
+            <div>
+              <label>Tip</label>
+              <br></br>
+              <input name='tip' type='number' placeholder='ex: 10%' value={this.state.tip} onChange={this.handleChange}></input>
+            </div>
           </div>
-          <div>
-          <label>Tip</label>
-          <br></br>
-          <input name='tip' type='number' placeholder='ex: 10%' value={this.state.tip} onChange={this.handleChange}></input>
+          <div id='results'>
+            <div>Tip : <br></br><br></br><span>{this.state.amount ? tipAmount.toFixed(2) : null} </span></div>
+            <div id='total-result'>Total : <br></br><br></br><span id='total'>{this.state.amount ? total : null}</span> </div>
           </div>
-          <div>Tip : <br></br><br></br><span>{this.state.amount ? tipAmount.toFixed(2) : null} </span></div>
-          <div>Total amount : <br></br><br></br><span id='total'>{this.state.amount ? total : null}</span> </div>
         </div>
         <Footer />
       </div>

@@ -108,17 +108,20 @@ span {
 
 @media only screen and (max-width: 768px) {
   #container {
-    max-width: 100%;
-    width: 200px;
-    margin: auto;
+    width: 100%;
     margin-top: 30px;
-    padding: 10px
+    padding: 0px;
+    flex-direction: row;
   }
   input {
-    width: 150px;
+    width: 100px;
   }
 
   .navbar{
     padding-left: 10px;
+  }
+
+  #results div {
+    margin-bottom: 18px;
   }
 }
